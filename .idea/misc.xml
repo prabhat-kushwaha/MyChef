@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable-v24/bg_collapsing_toolbar.xml" value="0.1805921052631579" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable-v24/bg_collapsing_toolbar_content.xml" value="0.1991552956465237" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable-v24/bg_google_button.xml" value="0.20164473684210527" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable-v24/bg_outline_input.xml" value="0.17135416666666667" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable-v24/ic_like.xml" value="0.13125" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_button.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_collapsing_toolbar.xml" value="0.1805921052631579" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_collapsing_toolbar_content.xml" value="0.1991552956465237" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_fill_button.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_fill_colored_input.xml" value="0.1991552956465237" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_google_button.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_input.xml" value="0.31927083333333334" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_like_button.xml" value="0.1680921052631579" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_outline_button.xml" value="0.12" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_outline_fill_input.xml" value="0.20164473684210527" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_outline_input.xml" value="0.10822368421052632" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_outline_searchview.xml" value="0.1991552956465237" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_selected_button.xml" value="0.18914473684210525" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bg_unselected_button.xml" value="0.31927083333333334" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bottom_navigation_item_background.xml" value="0.18914473684210525" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bottom_navigation_item_background_mask.xml" value="0.18914473684210525" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/bottom_navigation_item_colors.xml" value="0.18914473684210525" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.11546052631578947" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.11480263157894736" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/ic_baseline_menu_book_24.xml" value="0.1361842105263158" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.18914473684210525" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/ic_favorite.xml" value="0.13125" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/ic_food.xml" value="0.16875" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.13388157894736843" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/ic_like.xml" value="0.13125" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1125" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/ic_person_flat.xml" value="0.1991552956465237" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/ic_read_more.xml" value="0.13125" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/ic_round_refresh_24.xml" value="0.1991552956465237" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/drawable/rect_selector.xml" value="0.10822368421052632" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/activity_auth.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/activity_home.xml" value="0.15" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/dialog_web_view.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/divider_layout.xml" value="0.10756578947368421" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/fragment_notifications.xml" value="0.10723684210526316" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/fragment_onboarding.xml" value="0.14" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/fragment_profile.xml" value="0.10723684210526316" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/fragment_recipe_details.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/fragment_search.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/fragment_sign_in.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/fragment_sign_up.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/fragment_splash.xml" value="0.13521695257315844" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/fragment_upload_recipe.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/item_category.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/item_ingredient.xml" value="0.11842105263157894" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/item_network_state_layout.xml" value="0.17281420765027322" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/item_recent_search.xml" value="0.20108695652173914" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/item_recipe.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/layout/recipe_details_sheet.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/menu/app_menu.xml" value="0.18881578947368421" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/menu/bottom_nav_menu.xml" value="0.16611842105263158" />
+        <entry key="..\:/AndroidStudioProjects/MyChef/app/src/main/res/xml/tabs.xml" value="0.12295081967213115" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="4dp">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvRecipeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/margin_16dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/width_156dp"
+            android:layout_height="@dimen/height_156dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cvRecipeContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="?attr/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingPrefix"
+        tools:text="@tools:sample/full_names" />
+</RelativeLayout>
+
+<!--
+
+<androidx.appcompat.widget.AppCompatImageView
+android:layout_width="@dimen/width_24dp"
+android:layout_height="@dimen/height_24dp"
+android:layout_gravity="right"
+android:layout_margin="@dimen/margin_8dp"
+android:elevation="@dimen/height_100dp"
+app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+tools:ignore="RtlHardcoded">
+
+</androidx.appcompat.widget.AppCompatImageView>-->

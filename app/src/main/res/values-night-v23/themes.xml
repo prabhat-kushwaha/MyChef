@@ -1,0 +1,105 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.MyChef" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryColor</item>
+        <item name="colorOnPrimary">@color/secondary_textColor</item>
+        <item name="colorSecondary">@color/primaryColor</item>
+        <item name="colorSecondaryVariant">@color/primaryColor</item>
+        <item name="colorOnSecondary">@color/secondary_textColor</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="drawableTintColor">@color/outlineColor</item>
+        <item name="primaryTextColor">@color/outlineColor</item>
+        <item name="secondaryTextColor">@color/whiteColor</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="outLineColor">@color/blackThemeOutLineColor</item>
+        <item name="surfaceColor">?attr/outLineColor</item>
+        <item name="formBackgroundColor">@color/formBackgroundColorDarkTheme</item>
+        <item name="android:navigationBarColor">?attr/surfaceColor</item>
+    </style>
+
+    <style name="FillButtonStyle">
+        <item name="android:layout_marginEnd">@dimen/margin_18dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_18dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/whiteColor</item>
+    </style>
+
+
+    <style name="OutlineButtonStyle">
+        <item name="android:layout_marginEnd">@dimen/margin_18dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_18dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/secondary_textColor</item>
+    </style>
+
+    <style name="PrimaryTextStyle">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">?attr/primaryTextColor</item>
+    </style>
+
+    <style name="SecondaryTextStyle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">?attr/secondaryTextColor</item>
+    </style>
+
+    <style name="EditTextWithDrawableStyle">
+        <item name="android:textColor">?attr/primaryTextColor</item>
+        <item name="android:paddingStart">@dimen/padding_12dp</item>
+        <item name="android:paddingEnd">@dimen/padding_12dp</item>
+        <item name="android:textSize">@dimen/textSize_15sp</item>
+        <item name="android:drawableTint">?attr/drawableTintColor</item>
+        <item name="android:drawablePadding">@dimen/padding_12dp</item>
+        <item name="android:layout_height">@dimen/height_56dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginEnd">@dimen/margin_24dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_24dp</item>
+    </style>
+
+    <style name="TextViewHeadline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextViewHeadline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextViewHeadline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextViewHeadline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextViewHeadline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextViewHeadline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextViewBody1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextViewBody2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+
+    <style name="TextViewSubtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextViewSubtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+</resources>

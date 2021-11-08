@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_cooking">Start Cooking</string>
+    <string name="join_community">Let\'s join our community\nto cook better food!</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="please_enter_your_account_here">Please enter your account here</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login">Login</string>
+    <string name="or_continue_with">Or continue with</string>
+    <string name="email_or_phone_number">Email or phone number</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_any_account">Don\'t have any account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="your_password_must_contain">Your Password must contain:</string>
+    <string name="contains_a_number">Contains a number</string>
+    <string name="contains_six_characters">Atleast 6 characters</string>
+    <string name="category">Category</string>
+    <string name="recipe_image">Recipe Image</string>
+    <string name="my">My</string>
+    <string name="chef">Chef</string>
+    <string name="recipe_like_button">Recipe Like Button</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="prabhat_kushwaha">Prabhat Kushwaha</string>
+    <string name="nutrition">Nutrition</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="gram">Gram</string>
+    <string name="servings">Servings</string>
+    <string name="instructions">Instructions</string>
+    <string name="search_recipe">Search Recipe</string>
+    <string name="what_you_want_to_cook_today">What you want to cook today?</string>
+    <string name="hello_prabhat">Hello Prabhat,</string>
+    <string name="retry">Retry</string>
+    <string name="read_more">read more</string>
+</resources>

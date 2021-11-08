@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="primaryTextColor" format="reference" />
+    <attr name="drawableTintColor" format="reference" />
+    <attr name="secondaryTextColor" format="reference" />
+    <attr name="outLineColor" format="reference" />
+    <attr name="surfaceColor" format="reference" />
+    <attr name="formBackgroundColor" format="reference" />
+    <attr name="rectSelector" format="reference" />
+    <attr name="toolbarPopupTheme" format="reference" />
+</resources>

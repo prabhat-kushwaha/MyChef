@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "480675708835",
+    "project_id": "mychef-c4b12",
+    "storage_bucket": "mychef-c4b12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480675708835:android:8dce3956a78c18f9dc6416",
+        "android_client_info": {
+          "package_name": "com.prabhatkushwaha.mychef"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480675708835-0c368m2ho9rapbaj4g5lmgc4vneae1g3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPyynxY0Qmt3EQY65FlcLMyJZ42GGgek8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480675708835-0c368m2ho9rapbaj4g5lmgc4vneae1g3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

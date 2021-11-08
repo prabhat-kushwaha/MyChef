@@ -1,0 +1,112 @@
+import dependencies.*
+import Application
+import Java
+import dependencies.Annotations
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
+
+
+}
+def endpointPropertiesFile = rootProject.file("endpoint.properties")
+def endpointProperties = new Properties()
+endpointProperties.load(new FileInputStream(endpointPropertiesFile))
+
+
+android {
+    compileSdk Application.compileSdk
+
+    defaultConfig {
+        applicationId Application.applicationId
+        minSdk Application.minSdk
+        targetSdk Application.targetSdk
+        versionCode Application.versionCode
+        versionName Application.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "BASE_URL", endpointProperties['BASE_URL'])
+        buildConfigField("String", "KEY", endpointProperties['KEY'])
+        buildConfigField("String", "SEARCH_END_POINT", endpointProperties['SEARCH_END_POINT'])
+        buildConfigField("String", "RECIPE_DETAILS_END_POINT", endpointProperties['RECIPE_DETAILS_END_POINT'])
+    }
+
+    buildTypes {
+
+        debug {
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "false"]
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation Dependencies.kotlin
+    implementation Dependencies.appcompat
+    implementation Dependencies.material
+    implementation Dependencies.constraint_layout
+    implementation Dependencies.swipe_refresh_layout
+    implementation Dependencies.core_ktx
+    implementation Dependencies.recyclerview
+    implementation Dependencies.play_core_ktx
+    implementation Dependencies.preference
+    implementation Dependencies.retrofit
+    implementation Dependencies.json_converter
+    implementation Dependencies.retrofit_scalars
+    implementation Dependencies.room_runtime
+    implementation Dependencies.room_ktx
+    implementation Dependencies.lifecycle_view_model
+    implementation Dependencies.lifecycle_livedata
+    implementation Dependencies.lifecycle_extensions
+    implementation Dependencies.firebase_analytics
+    implementation Dependencies.firebase_config
+    implementation Dependencies.firebase_crashlytics
+    implementation Dependencies.firebase_messaging
+    implementation Dependencies.paging
+    implementation Dependencies.lottie
+    implementation Dependencies.browser
+    implementation Dependencies.webkit
+    implementation Dependencies.hilt
+    implementation Dependencies.hilt_nav
+    implementation Dependencies.http_logger
+    implementation Dependencies.nav_fragment
+    implementation Dependencies.nav_ui_ktx
+    implementation Dependencies.shimmer
+    implementation Dependencies.palette
+    implementation Dependencies.coil
+
+
+    implementation 'com.fatsecret4j:fatsecret-platform:2.0'
+
+
+    //test-libs
+    testImplementation TestDependencies.junit
+    androidTestImplementation TestDependencies.junit_ext
+    androidTestImplementation TestDependencies.espresso
+    //annotaions
+    kapt Annotations.dataBinding
+    kapt Annotations.roomCompiler
+    kapt Annotations.hilt_compiler
+
+}

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvWelcomeMsg"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_127dp"
+        android:text="@string/welcome_back"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tvAccountDetails"
+        style="@style/SecondaryTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWelcomeMsg"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:text="@string/please_enter_your_account_here"
+        android:textAlignment="center"
+        android:textSize="@dimen/textSize_15sp" />
+
+
+    <EditText
+        android:id="@+id/etEmailOrPhone"
+        style="@style/EditTextWithDrawableStyle"
+        android:layout_below="@+id/tvAccountDetails"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_32dp"
+        android:background="@drawable/bg_outline_input"
+        android:drawableStart="@drawable/ic_email"
+        android:hint="@string/email_or_phone_number"
+        android:textColorHint="@color/secondary_textColor"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etEmailOrPhone"
+        android:layout_marginTop="@dimen/margin_16dp">
+
+        <EditText
+            style="@style/EditTextWithDrawableStyle"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_outline_input"
+            android:drawableStart="@drawable/ic_lock"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_59dp"
+            android:src="@drawable/ic_visibility_gone"
+            app:tint="?attr/drawableTintColor"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        style="@style/SecondaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:layout_marginEnd="@dimen/margin_48dp"
+        android:text="@string/forgot_password"
+        android:textAlignment="center"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="@dimen/textSize_15sp" />
+
+
+    <Button
+        android:id="@+id/btSignIn"
+        style="@style/FillButtonStyle"
+        android:layout_below="@id/tvForgotPassword"
+        android:layout_marginTop="@dimen/margin_72dp"
+        android:background="@drawable/bg_selected_button"
+        android:text="@string/login" />
+
+
+    <TextView
+        android:id="@+id/tvOr"
+        style="@style/SecondaryTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btSignIn"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:text="@string/or_continue_with"
+        android:textAlignment="center"
+        android:textSize="@dimen/textSize_15sp" />
+
+    <FrameLayout
+        android:id="@+id/btGoogleSignIn"
+        style="@style/FillButtonStyle"
+        android:layout_height="@dimen/height_56dp"
+        android:layout_below="@id/tvOr"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:background="@drawable/bg_google_button"
+        app:backgroundTint="@null">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_google" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btGoogleSignIn"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tvAccountMsg"
+            style="@style/PrimaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:text="@string/don_t_have_any_account"
+            android:textAlignment="center"
+            android:textSize="@dimen/textSize_15sp" />
+
+        <TextView
+            android:id="@+id/tvSignUp"
+            style="@style/PrimaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:text="@string/sign_up"
+            android:textAlignment="center"
+            android:textColor="@color/primaryColor"
+            android:textSize="@dimen/textSize_15sp" />
+    </LinearLayout>
+
+</RelativeLayout>

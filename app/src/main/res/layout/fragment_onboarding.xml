@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivOnBoarding"
+        android:layout_width="@dimen/width_300dp"
+        android:layout_height="@dimen/height_300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_32dp"
+        android:background="@drawable/ic_food" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_50dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvStartCooking"
+            style="@style/PrimaryTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_cooking"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/tvLetsJoin"
+            style="@style/SecondaryTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:text="@string/join_community"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btGetStarted"
+            style="@style/FillButtonStyle"
+            android:layout_marginTop="@dimen/margin_97dp"
+            android:background="@drawable/bg_selected_button"
+            android:text="@string/get_started" />
+    </LinearLayout>
+</RelativeLayout>

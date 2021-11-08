@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvWelcomeMsg"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_127dp"
+        android:text="@string/welcome_back"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/tvAccountDetails"
+        style="@style/SecondaryTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWelcomeMsg"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:text="@string/please_enter_your_account_here"
+        android:textAlignment="center"
+        android:textSize="@dimen/textSize_15sp" />
+
+
+    <EditText
+        android:id="@+id/etEmailOrPhone"
+        style="@style/EditTextWithDrawableStyle"
+        android:layout_below="@+id/tvAccountDetails"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_32dp"
+        android:background="@drawable/bg_outline_input"
+        android:drawableStart="@drawable/ic_email"
+        android:hint="@string/email_or_phone_number" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etEmailOrPhone"
+        android:layout_marginTop="@dimen/margin_16dp">
+
+        <EditText
+            android:id="@+id/etPassword"
+            style="@style/EditTextWithDrawableStyle"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_outline_input"
+            android:drawableStart="@drawable/ic_lock"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_59dp"
+            android:src="@drawable/ic_visibility_gone"
+            app:tint="?attr/drawableTintColor"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llPasswordValidate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlPassword"
+        android:layout_marginStart="@dimen/margin_24dp"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/PrimaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_password_must_contain"
+            android:textAlignment="center"
+            android:textSize="@dimen/textSize_17sp" />
+
+        <TextView
+            style="@style/PrimaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:drawablePadding="@dimen/padding_5dp"
+            android:text="@string/contains_six_characters"
+            android:textAlignment="center"
+            android:textColor="@color/secondary_textColor"
+            android:textSize="@dimen/textSize_15sp"
+            app:drawableStartCompat="@drawable/ic_check" />
+
+        <TextView
+            style="@style/PrimaryTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:drawablePadding="@dimen/padding_5dp"
+            android:text="@string/contains_a_number"
+            android:textAlignment="center"
+            android:textColor="@color/secondary_textColor"
+            android:textSize="@dimen/textSize_15sp"
+            app:drawableStartCompat="@drawable/ic_check" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btSignUp"
+        style="@style/FillButtonStyle"
+        android:layout_below="@id/llPasswordValidate"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:background="@drawable/bg_selected_button"
+        android:text="@string/sign_up" />
+
+
+</RelativeLayout>

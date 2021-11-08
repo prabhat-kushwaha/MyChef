@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#1FCC79</color>
+    <color name="darkGreen">#E61FCC79</color>
+    <color name="secondaryColor">#FF6464</color>
+    <color name="main_textColor">#2E3E5C</color>
+    <color name="secondary_textColor">#9FA5C0</color>
+    <color name="outlineColor">#D0DBEA</color>
+    <color name="formColor">#F4F5F7</color>
+    <color name="statusBarColorDarkTheme">#121212</color>
+    <color name="whiteColor">#FFFFFF</color>
+    <color name="blackColor">#000000</color>
+    <color name="blackThemeOutLineColor">#121212</color>
+
+    <color name="surfaceColor">#FFFFFF</color>
+    <color name="formBackgroundColor">#D0DBEA</color>
+
+
+    <color name="surfaceColorDarkTheme">#1e1e1e</color>
+    <color name="formBackgroundColorDarkTheme">#121212</color>
+</resources>

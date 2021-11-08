@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.prabhatkushwaha.mychef.framework.presentation.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_recipeDetailsFragment"
+            app:destination="@id/recipeDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_uploadRecipeFragment"
+            app:destination="@id/uploadRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailsFragment"
+        android:name="com.prabhatkushwaha.mychef.framework.presentation.ui.recipedetails.RecipeDetailsFragment"
+        android:label="fragment_recipe_details"
+        tools:layout="@layout/fragment_recipe_details">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="recipeImage"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_recipeDetailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.prabhatkushwaha.mychef.framework.presentation.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/uploadRecipeFragment"
+        android:name="com.prabhatkushwaha.mychef.framework.presentation.ui.uploadrecipe.UploadRecipeFragment"
+        android:label="fragment_upload_recipe"
+        tools:layout="@layout/fragment_upload_recipe" />
+</navigation>
