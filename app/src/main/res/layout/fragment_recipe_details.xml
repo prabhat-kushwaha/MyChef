@@ -92,11 +92,13 @@
                 android:layout_marginEnd="@dimen/width_24dp"
                 android:orientation="horizontal">
 
-                <androidx.appcompat.widget.AppCompatImageView
+                <ToggleButton
                     android:id="@+id/ivLike"
                     android:layout_width="@dimen/radius_30dp"
                     android:layout_height="@dimen/radius_30dp"
-                    app:srcCompat="@drawable/ic_favorite_outline" />
+                    android:background="@drawable/toggle_selector"
+                    android:textOff=""
+                    android:textOn="" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/radius_30dp"
@@ -134,25 +136,24 @@
 
 
             <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_gravity="end"
                 android:id="@+id/btReadMore"
-                android:padding="@dimen/padding_12dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="end"
                 android:layout_marginStart="@dimen/margin_24dp"
                 android:layout_marginTop="@dimen/margin_24dp"
                 android:layout_marginEnd="@dimen/margin_24dp"
                 android:layout_marginBottom="@dimen/margin_24dp"
                 android:background="@drawable/bg_selected_button"
                 android:contentDescription="@string/read_more"
-                android:text="@string/read_more"
+                android:drawableStart="@drawable/ic_baseline_menu_book_24"
                 android:drawablePadding="@dimen/padding_12dp"
+                android:padding="@dimen/padding_12dp"
+                android:text="@string/read_more"
                 android:textAllCaps="false"
-                android:textColor="@color/whiteColor"
-                android:drawableStart="@drawable/ic_baseline_menu_book_24" />
+                android:textColor="@color/whiteColor" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

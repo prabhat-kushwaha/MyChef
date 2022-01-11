@@ -1,5 +1,6 @@
 package com.prabhatkushwaha.mychef
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -23,6 +24,7 @@ import kotlinx.coroutines.InternalCoroutinesApi
 import javax.inject.Inject
 import com.android.volley.toolbox.Volley
 import com.prabhatkushwaha.mychef.framework.presentation.ui.home.HomeFragment
+import com.prabhatkushwaha.mychef.framework.presentation.ui.recipedetails.RecipeDetailsFragment
 import com.prabhatkushwaha.mychef.framework.presentation.ui.signin.SignInFragment
 
 
@@ -64,16 +66,34 @@ class HomeActivity : AppCompatActivity() {
     fun disableNavigationBar() {
         bottomNavigationView.visibility = View.GONE
     }
-    override fun onBackPressed() {
-        val navHostFragment: NavHostFragment =
-            supportFragmentManager.findFragmentById(R.id.app_nav_host_fragment) as NavHostFragment
-        val fragment = navHostFragment.childFragmentManager.fragments[0]
-        val navController=navHostFragment.navController
-        if (fragment is HomeFragment) {
-            navController.navigate(R.id.action_recipeDetailsFragment_to_homeFragment)
+    /* override fun onBackPressed() {
+         val navHostFragment: NavHostFragment =
+             supportFragmentManager.findFragmentById(R.id.app_nav_host_fragment) as NavHostFragment
+         val fragment = navHostFragment.childFragmentManager.fragments[0]
+         val navController=navHostFragment.navController
+         if (fragment is RecipeDetailsFragment) {
+             navController.navigate(R.id.action_recipeDetailsFragment_to_homeFragment)
+         } else super.onBackPressed()
+     }*/
 
-        } else super.onBackPressed()
+    fun changeToolBarPrevColor() {
+        when (resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)) {
+            Configuration.UI_MODE_NIGHT_YES -> {
+                val window: Window = window
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                window.statusBarColor = getColor(R.color.transparent)
+            }
+            Configuration.UI_MODE_NIGHT_NO -> {
+                val window: Window = window
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                window.statusBarColor = getColor(R.color.whiteColor)
+            }
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> {
+                val window: Window = window
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                window.statusBarColor = getColor(R.color.transparent)
+            }
+        }
     }
-
 
 }

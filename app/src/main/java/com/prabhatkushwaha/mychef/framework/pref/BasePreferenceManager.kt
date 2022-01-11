@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
+import com.prabhatkushwaha.mychef.framework.presentation.PrefManager
 
 open class BasePreferenceManager(prefName: String?, base: Context) {
 
@@ -18,6 +19,5 @@ open class BasePreferenceManager(prefName: String?, base: Context) {
     }
 
     val editor: SharedPreferences.Editor = sPrefManager.edit()
-
 
 }

@@ -30,8 +30,6 @@ abstract class CacheResponseHandler<RequestType, ResponseType>(
                     handleResponse(cacheResponse.data)
 
             }
-
-
         }
     }
 

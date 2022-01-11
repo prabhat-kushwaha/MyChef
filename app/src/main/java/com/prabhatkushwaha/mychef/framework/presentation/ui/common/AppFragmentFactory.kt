@@ -7,6 +7,7 @@ import com.prabhatkushwaha.mychef.framework.presentation.ui.home.HomeFragment
 import com.prabhatkushwaha.mychef.framework.presentation.ui.onboarding.OnBoardingFragment
 import com.prabhatkushwaha.mychef.framework.presentation.ui.recipedetails.RecipeDetailsFragment
 import com.prabhatkushwaha.mychef.framework.presentation.ui.signin.SignInFragment
+import com.prabhatkushwaha.mychef.framework.presentation.ui.signup.SignUpFragment
 import com.prabhatkushwaha.mychef.framework.presentation.ui.splash.SplashScreenFragment
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
@@ -42,6 +43,9 @@ constructor(
             }
             SignInFragment::class.java.name -> {
                 SignInFragment(viewModelFactory)
+            }
+            SignUpFragment::class.java.name -> {
+                SignUpFragment()
             }
             else -> {
                 super.instantiate(classLoader, className)

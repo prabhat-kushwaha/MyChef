@@ -5,15 +5,14 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton
 
-/**
- * This pref class is used to store next remote key to be fetch from server for WordPagingRemoteMediator.kt
- */
+
 @Singleton
 class LoginStatusPrefManager @Inject constructor(@ApplicationContext base: Context) :
     BasePreferenceManager(PREF_NAME, base) {
 
-    fun setIsNewUser(isNewUser: Boolean) {
+    fun setIsNewUser(isNewUser: Boolean): Boolean {
         editor.putBoolean(IS_NEW_USER, isNewUser).apply()
+        return sPrefManager.getBoolean(IS_NEW_USER, true)
     }
 
     fun getIsNewUser(): Boolean {

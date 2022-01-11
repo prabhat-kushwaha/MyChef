@@ -15,7 +15,8 @@
     <color name="surfaceColor">#FFFFFF</color>
     <color name="formBackgroundColor">#D0DBEA</color>
 
-
+    <color name="transparent">@android:color/transparent</color>
     <color name="surfaceColorDarkTheme">#1e1e1e</color>
     <color name="formBackgroundColorDarkTheme">#121212</color>
+    <color name="dialogBackground">#60000000</color>
 </resources>

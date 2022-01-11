@@ -7,7 +7,7 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="login">Login</string>
     <string name="or_continue_with">Or continue with</string>
-    <string name="email_or_phone_number">Email or phone number</string>
+    <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="don_t_have_any_account">Don\'t have any account?</string>
     <string name="sign_up">Sign Up</string>

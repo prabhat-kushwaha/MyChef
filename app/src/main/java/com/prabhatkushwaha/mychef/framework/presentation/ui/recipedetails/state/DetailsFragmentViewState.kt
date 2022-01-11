@@ -8,5 +8,6 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class DetailsFragmentViewState(
     var recipe: RecipeDetailsModel? = null,
-    var recipeDetailsId: String? = null
+    var recipeDetailsId: String? = null,
+    var isRecipeSaved:Boolean?=null
 ) : Parcelable

@@ -28,6 +28,7 @@ class RecipeRemoteMediator constructor(
 
     override suspend fun initialize(): InitializeAction {
         return if (skipInitialRefresh) InitializeAction.SKIP_INITIAL_REFRESH
+
         else InitializeAction.LAUNCH_INITIAL_REFRESH
     }
 

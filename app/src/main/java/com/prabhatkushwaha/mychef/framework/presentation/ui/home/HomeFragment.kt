@@ -36,7 +36,7 @@ import com.prabhatkushwaha.mychef.framework.presentation.ui.views.UiUtils.Compan
 class HomeFragment(viewModelFactory: ViewModelProvider.Factory) :
     BaseFragment<FragmentHomeBinding>() {
 
-   private var navController: NavController? = null
+    private var navController: NavController? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         navController = Navigation.findNavController(view)
@@ -59,11 +59,13 @@ class HomeFragment(viewModelFactory: ViewModelProvider.Factory) :
                     recipeImage = bitmap.getBase64()
                 )
             navController?.navigate(action, extras)
+
         }
     }
 
     override fun subscribeObservers() {
         viewModel.recipe.observe(viewLifecycleOwner) {
+            hideProgressDialog()
             binding.shimmerLayout.stopShimmer()
             binding.shimmerLayout.hideShimmer()
             lifecycleScope.launch {
@@ -84,6 +86,7 @@ class HomeFragment(viewModelFactory: ViewModelProvider.Factory) :
     }
 
     private fun startNewSearch() {
+        showProgressDialog()
         viewModel.getRecipe()
     }
 

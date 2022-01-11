@@ -6,7 +6,6 @@ object Dependencies {
 
 
 
-
     val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     val shimmer = "com.facebook.shimmer:shimmer:${Versions.shimmer}"
 

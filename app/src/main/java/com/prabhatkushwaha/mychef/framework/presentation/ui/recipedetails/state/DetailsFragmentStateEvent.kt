@@ -22,4 +22,20 @@ sealed class DetailsFragmentStateEvent {
         }
 
     }
+
+    class SaveLikedRecipeEvent() : StateEvent {
+        override fun errorInfo(): String {
+            return "Recipe Not Saved Found"
+        }
+
+        override fun stateEvent(): String {
+            return "SaveLikedRecipeEvent"
+        }
+
+        override fun shouldShowProgressDialog(): Boolean {
+            return true
+        }
+
+    }
+
 }

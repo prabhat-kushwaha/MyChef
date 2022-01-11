@@ -1,7 +1,6 @@
 package com.prabhatkushwaha.mychef.di
 
-import android.app.Application
-import android.content.SharedPreferences
+
 import androidx.lifecycle.ViewModelProvider
 import androidx.paging.ExperimentalPagingApi
 import com.prabhatkushwaha.mychef.business.interactors.home.HomeFragmentInteractors
@@ -9,19 +8,21 @@ import com.prabhatkushwaha.mychef.business.interactors.onboarding.OnBoardingFrag
 import com.prabhatkushwaha.mychef.business.interactors.recipedetails.DetailsFragmentInteractors
 import com.prabhatkushwaha.mychef.business.interactors.siginin.SignInFragmentInteractors
 import com.prabhatkushwaha.mychef.business.interactors.splash.SplashFragmentInteractors
-import com.prabhatkushwaha.mychef.framework.pref.LoginStatusPrefManager
 import com.prabhatkushwaha.mychef.framework.presentation.ui.common.AppViewModelFactory
-import com.prabhatkushwaha.mychef.framework.presentation.ui.recipedetails.RecipeDetailsFragmentDirections
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.InternalCoroutinesApi
 import javax.inject.Singleton
 
+@FlowPreview
 @Module
 @InstallIn(value = [SingletonComponent::class])
 object AppViewModelModule {
+    @ExperimentalCoroutinesApi
     @ExperimentalPagingApi
     @InternalCoroutinesApi
     @Singleton
@@ -36,8 +37,8 @@ object AppViewModelModule {
         return AppViewModelFactory(
             homeFragmentInteractors,
             detailsFragmentInteractors,
-            onBoardingFragmentInteractors,
             splashFragmentInteractors,
+            onBoardingFragmentInteractors,
             signInFragmentInteractors
         )
     }

@@ -3,8 +3,9 @@ package com.prabhatkushwaha.mychef.framework.datasource.cache.database
 import androidx.room.*
 import androidx.sqlite.db.SupportSQLiteOpenHelper
 import com.prabhatkushwaha.mychef.framework.datasource.cache.model.RecipeCacheModel
+import com.prabhatkushwaha.mychef.framework.datasource.cache.model.RecipeLikedCacheModel
 
-@Database(entities = [ RecipeCacheModel::class], version = 1,exportSchema = false)
+@Database(entities = [ RecipeCacheModel::class,RecipeLikedCacheModel::class], version = 1,exportSchema = false)
 abstract class RecipeDataBase : RoomDatabase() {
 
     abstract fun getDao(): RecipeDao

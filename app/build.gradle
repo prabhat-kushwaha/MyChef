@@ -13,7 +13,6 @@ plugins {
     id 'kotlin-parcelize'
     id 'androidx.navigation.safeargs.kotlin'
 
-
 }
 def endpointPropertiesFile = rootProject.file("endpoint.properties")
 def endpointProperties = new Properties()
@@ -35,6 +34,7 @@ android {
         buildConfigField("String", "KEY", endpointProperties['KEY'])
         buildConfigField("String", "SEARCH_END_POINT", endpointProperties['SEARCH_END_POINT'])
         buildConfigField("String", "RECIPE_DETAILS_END_POINT", endpointProperties['RECIPE_DETAILS_END_POINT'])
+        buildConfigField("String", "CLIENT_ID", endpointProperties['CLIENT_ID'])
     }
 
     buildTypes {
@@ -98,6 +98,9 @@ dependencies {
 
 
     implementation 'com.fatsecret4j:fatsecret-platform:2.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
 
 
     //test-libs

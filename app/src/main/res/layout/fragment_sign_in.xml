@@ -27,40 +27,45 @@
 
 
     <EditText
-        android:id="@+id/etEmailOrPhone"
+        android:id="@+id/etEmail"
         style="@style/EditTextWithDrawableStyle"
         android:layout_below="@+id/tvAccountDetails"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/margin_32dp"
         android:background="@drawable/bg_outline_input"
         android:drawableStart="@drawable/ic_email"
-        android:hint="@string/email_or_phone_number"
+        android:hint="@string/email"
+        android:importantForAutofill="no"
         android:textColorHint="@color/secondary_textColor"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        android:inputType="textEmailAddress" />
 
 
     <RelativeLayout
         android:id="@+id/rlPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etEmailOrPhone"
+        android:layout_below="@+id/etEmail"
         android:layout_marginTop="@dimen/margin_16dp">
 
         <EditText
+            android:id="@+id/etPassword"
             style="@style/EditTextWithDrawableStyle"
             android:layout_centerInParent="true"
             android:background="@drawable/bg_outline_input"
             android:drawableStart="@drawable/ic_lock"
             android:hint="@string/password"
+            android:importantForAutofill="no"
             android:inputType="textPassword" />
 
         <ImageView
+            android:id="@+id/ivPasswordVisible"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/margin_59dp"
-            android:src="@drawable/ic_visibility_gone"
+            android:src="@drawable/ic_invisible"
             app:tint="?attr/drawableTintColor"
             tools:ignore="ContentDescription" />
 
@@ -90,38 +95,12 @@
         android:text="@string/login" />
 
 
-    <TextView
-        android:id="@+id/tvOr"
-        style="@style/SecondaryTextStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btSignIn"
-        android:layout_marginTop="@dimen/margin_24dp"
-        android:text="@string/or_continue_with"
-        android:textAlignment="center"
-        android:textSize="@dimen/textSize_15sp" />
-
-    <FrameLayout
-        android:id="@+id/btGoogleSignIn"
-        style="@style/FillButtonStyle"
-        android:layout_height="@dimen/height_56dp"
-        android:layout_below="@id/tvOr"
-        android:layout_marginTop="@dimen/margin_24dp"
-        android:background="@drawable/bg_google_button"
-        app:backgroundTint="@null">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_google" />
-    </FrameLayout>
 
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btGoogleSignIn"
+        android:layout_below="@id/btSignIn"
         android:layout_centerHorizontal="true">
 
         <TextView

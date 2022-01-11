@@ -1,4 +1,7 @@
 package com.prabhatkushwaha.mychef.business.interactors.siginin
 
-class SignInFragmentInteractors {
+import com.prabhatkushwaha.mychef.business.interactors.common.LoginStatus
+import javax.inject.Inject
+
+class SignInFragmentInteractors @Inject constructor( val loginStatus: LoginStatus) {
 }

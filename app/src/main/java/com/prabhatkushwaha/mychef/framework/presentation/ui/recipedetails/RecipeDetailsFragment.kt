@@ -1,16 +1,15 @@
 package com.prabhatkushwaha.mychef.framework.presentation.ui.recipedetails
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.ColorInt
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import androidx.paging.ExperimentalPagingApi
 import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.RecyclerView
-import androidx.transition.TransitionInflater
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
 import com.prabhatkushwaha.mychef.HomeActivity
 import com.prabhatkushwaha.mychef.R
@@ -41,27 +40,37 @@ class RecipeDetailsFragment(viewModelFactory: ViewModelProvider.Factory) :
         viewModelFactory
     }
 
+    private var homeActivity: HomeActivity? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val transition =
-            TransitionInflater.from(context).inflateTransition(android.R.transition.move)
-        sharedElementEnterTransition = transition
-        sharedElementReturnTransition = transition
-    }
-
-    @ColorInt
-    var statusBarColor: Int? = null
-    private var homeActivity: HomeActivity? = null
-
-    override fun initialize() {
         homeActivity = activity as HomeActivity
         homeActivity?.disableNavigationBar()
-        setRecipeData()
+
     }
+
+    override fun initialize() {
+
+        setRecipeData()
+        setListener()
+    }
+
+
+    private fun setListener() {
+
+        binding.ivLike.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+
+            } else {
+
+            }
+        }
+    }
+
 
     private fun setRecipeData() {
         val id = args.id
         viewModel.setRecipeDetailsId(id)
+        showProgressDialog()
         viewModel.setStateEvent(DetailsFragmentStateEvent.GetRecipeDetailsEvent())
     }
 
@@ -81,7 +90,6 @@ class RecipeDetailsFragment(viewModelFactory: ViewModelProvider.Factory) :
                 R.attr.colorPrimary
             )
         )
-        statusBarColor = homeActivity?.getStatusBarColor()
 
         homeActivity?.updateStatusBarColor(
             palette.getMutedColor(
@@ -104,6 +112,7 @@ class RecipeDetailsFragment(viewModelFactory: ViewModelProvider.Factory) :
 
     override fun subscribeObservers() {
         viewModel.viewState.observe(viewLifecycleOwner) { viewState ->
+            hideProgressDialog()
             viewState?.let {
                 it.recipe?.let { recipe ->
                     showRecipeDetails(recipe)
@@ -135,9 +144,7 @@ class RecipeDetailsFragment(viewModelFactory: ViewModelProvider.Factory) :
     }
 
     override fun onDestroyView() {
-        statusBarColor?.let {
-            homeActivity?.updateStatusBarColor(it)
-        }
+        homeActivity?.changeToolBarPrevColor()
         homeActivity?.enableNavigationBar()
         super.onDestroyView()
     }

@@ -1,4 +1,6 @@
 package com.prabhatkushwaha.mychef.business.interactors.splash
 
-class SplashFragmentInteractors {
+import com.prabhatkushwaha.mychef.business.interactors.common.LoginStatus
+
+class SplashFragmentInteractors(val loginStatus: LoginStatus) {
 }

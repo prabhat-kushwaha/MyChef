@@ -33,9 +33,5 @@ object AppFragmentFactory {
             )
     }
 
-  /*  interface Factory{
-        fun create(@BindsInstance app: MyChef): com.prabhatkushwaha.mychef.di.AppFragmentFactory
-    }*/
-
 
 }

@@ -22,6 +22,10 @@ import androidx.core.content.ContextCompat.startActivity
 import android.content.Intent
 import android.net.Uri
 import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
+
+
+
 
 
 class UiUtils {

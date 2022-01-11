@@ -19,7 +19,7 @@ class RecipeDetailsNetworkMapper : EntityMapper<RecipeDetailsNetworkModel, Recip
             recipe_id = entity.recipe.recipe_id,
             social_rank = entity.recipe.social_rank,
             source_url = entity.recipe.source_url,
-            title = entity.recipe.title
+            title = entity.recipe.title, toolbarColor = null
         )
     }
 

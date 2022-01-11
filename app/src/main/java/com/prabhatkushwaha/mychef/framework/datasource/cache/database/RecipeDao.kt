@@ -6,6 +6,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.prabhatkushwaha.mychef.framework.datasource.cache.model.RecipeCacheModel
+import com.prabhatkushwaha.mychef.framework.datasource.cache.model.RecipeLikedCacheModel
 
 
 @Dao
@@ -13,6 +14,10 @@ interface RecipeDao {
 
     @Insert
     suspend fun insertRecipes(list: List<RecipeCacheModel>)
+
+    @Insert
+    suspend fun insertLikedRecipe(recipe: RecipeLikedCacheModel):Long
+
 
     @Query("SELECT * FROM RecipeCacheModel")
     fun getAllRecipe(): LiveData<List<RecipeCacheModel>>

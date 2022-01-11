@@ -3,6 +3,7 @@ package com.prabhatkushwaha.mychef.di
 import androidx.paging.ExperimentalPagingApi
 import com.prabhatkushwaha.mychef.business.data.cache.abstraction.RecipeCacheDataSource
 import com.prabhatkushwaha.mychef.business.data.network.abstarction.RecipeNetworkDataSource
+import com.prabhatkushwaha.mychef.business.interactors.common.LoginStatus
 import com.prabhatkushwaha.mychef.business.interactors.home.HomeFragmentInteractors
 import com.prabhatkushwaha.mychef.business.interactors.home.SearchRecipe
 import com.prabhatkushwaha.mychef.business.interactors.onboarding.OnBoardingFragmentInteractors
@@ -11,6 +12,7 @@ import com.prabhatkushwaha.mychef.business.interactors.recipedetails.GetRecipeDe
 import com.prabhatkushwaha.mychef.business.interactors.siginin.SignInFragmentInteractors
 import com.prabhatkushwaha.mychef.business.interactors.splash.SplashFragmentInteractors
 import com.prabhatkushwaha.mychef.framework.datasource.cache.mapper.RecipeCacheMapper
+import com.prabhatkushwaha.mychef.framework.pref.LoginStatusPrefManager
 import com.prabhatkushwaha.mychef.framework.pref.RemoteKeyPrefManager
 import dagger.Module
 import dagger.Provides
@@ -58,22 +60,30 @@ object InteractionModule {
     @Singleton
     @Provides
     fun providesOnBoardingFragmentInteractor(
+        loginStatus: LoginStatus
     ): OnBoardingFragmentInteractors {
         return OnBoardingFragmentInteractors(
+            loginStatus
         )
     }
+
     @Singleton
     @Provides
     fun providesSignInFragmentInteractor(
+        loginStatus: LoginStatus
     ): SignInFragmentInteractors {
         return SignInFragmentInteractors(
+            loginStatus
         )
     }
+
     @Singleton
     @Provides
     fun providesSplashFragmentInteractor(
+        loginStatus: LoginStatus
     ): SplashFragmentInteractors {
-        return SplashFragmentInteractors()
+        return SplashFragmentInteractors(loginStatus)
     }
+
 
 }

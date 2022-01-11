@@ -9,7 +9,7 @@ object Versions {
     const val browser = "1.3.0"
     const val glide = "4.12.0"
     const val hilt_nav = "1.0.0"
-    const val lottie = "3.4.1"
+    const val lottie = "4.2.0"
     const val paging = "3.0.0"
     const val kotlin = "1.5.0"
     const val kotlin_version = "1.5.30"
@@ -38,7 +38,7 @@ object Versions {
     const val firebase_messaging="22.0.0"
     const val firebase_crashlytics = "18.2.1"
 
-    const val nav_version="2.3.5"
+    const val nav_version="2.4.0-alpha02"
     const val shimmer="0.5.0"
     const val palette="1.0.0"
 

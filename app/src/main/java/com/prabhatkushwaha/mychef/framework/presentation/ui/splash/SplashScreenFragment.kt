@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +19,7 @@ import com.prabhatkushwaha.mychef.HomeActivity
 import com.prabhatkushwaha.mychef.R
 import com.prabhatkushwaha.mychef.databinding.FragmentSplashBinding
 import com.prabhatkushwaha.mychef.framework.presentation.ui.common.BaseFragment
+import com.prabhatkushwaha.mychef.framework.presentation.ui.splash.state.SplashStateEvent
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.InternalCoroutinesApi
@@ -44,12 +46,16 @@ class SplashScreenFragment(private val factory: ViewModelProvider.Factory) :
 
     override fun initialize() {
         Handler(Looper.getMainLooper()).postDelayed({
-            //if (viewModel.isSignIn())
-            startActivity(Intent(context, HomeActivity::class.java))
-            //else if (viewModel.isNewUser())
-            //  navController?.navigate(R.id.action_splashScreenFragment_to_onBoardingFragment)
-            //else if (!viewModel.isNewUser())
-            //     navController?.navigate(R.id.action_splashScreenFragment_to_signInFragment)
+            when {
+                viewModel.isNewUser() -> navController?.navigate(R.id.action_splashScreenFragment_to_onBoardingFragment)
+                viewModel.isSignIn() -> {
+                    startActivity(Intent(context, HomeActivity::class.java))
+                    activity?.finish()
+                }
+                else -> navController?.navigate(R.id.action_splashScreenFragment_to_signInFragment)
+            }
+
+
         }, 1000)
     }
 

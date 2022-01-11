@@ -15,14 +15,13 @@ class RecipeDetailsViewModel @Inject constructor(private val interactor: Details
     BaseViewModel<DetailsFragmentViewState>() {
 
 
-
-
     override fun setStateEvent(stateEvent: StateEvent) {
 
         val job: Flow<DataState<DetailsFragmentViewState>?> = when (stateEvent) {
             is DetailsFragmentStateEvent.GetRecipeDetailsEvent -> interactor.getRecipeDetails.getRecipeDetails(
                 getRecipeDetailsId(), stateEvent
             )
+
             else -> {
                 emitInvalidStateEvent(stateEvent)
             }
@@ -52,6 +51,10 @@ class RecipeDetailsViewModel @Inject constructor(private val interactor: Details
 
     private fun getRecipeDetailsId(): String {
         return getCurrentViewStateOrNew().recipeDetailsId ?: ""
+    }
+
+    private fun getRecipe(): RecipeDetailsModel? {
+        return getCurrentViewStateOrNew().recipe
     }
 
     override fun initNewViewState(): DetailsFragmentViewState {

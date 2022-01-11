@@ -3,6 +3,9 @@ package com.prabhatkushwaha.mychef.di
 import android.content.Context
 import androidx.paging.ExperimentalPagingApi
 import androidx.room.Room
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.FirebaseAuth
+import com.prabhatkushwaha.mychef.BuildConfig
 import com.prabhatkushwaha.mychef.business.data.cache.abstraction.RecipeCacheDataSource
 import com.prabhatkushwaha.mychef.business.data.cache.impl.RecipeCacheDataSourceImpl
 import com.prabhatkushwaha.mychef.business.data.network.abstarction.RecipeNetworkDataSource
@@ -24,6 +27,9 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
+import android.R
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+
 
 @Module
 @InstallIn(value = [SingletonComponent::class])
@@ -69,7 +75,7 @@ object ProductionModule {
         recipeDao: RecipeDao,
         recipeCacheMapper: RecipeCacheMapper
     ): RecipeDaoService {
-        return RecipeDaoServiceImpl(recipeDao, recipeCacheMapper)
+        return RecipeDaoServiceImpl(recipeDao,recipeCacheMapper)
     }
 
     @Singleton
@@ -100,5 +106,13 @@ object ProductionModule {
         recipeDetailsNetworkMapper: RecipeDetailsNetworkMapper
     ): RecipeApiService {
         return RecipeApiServiceImpl(recipeService, recipeNetworkMapper, recipeDetailsNetworkMapper)
+    }
+
+
+
+    @Singleton
+    @Provides
+    fun providesFirebaseAuthObj(): FirebaseAuth {
+        return FirebaseAuth.getInstance()
     }
 }
